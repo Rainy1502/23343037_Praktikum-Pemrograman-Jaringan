@@ -93,10 +93,3 @@ sequenceDiagram
    end
    S-->>C: 200 { prediksiCuaca }
 ```
-
-Jika Mermaid tidak dirender di viewer Anda, ada fallback SVG yang disertakan: 
-
-![Diagram RESTful - fallback SVG](/img/RESTful_API_small.svg)
-
---
-Dokumentasi ini dibuat otomatis oleh alat bantu pengembangan. Jika Anda ingin saya menerapkan ESLint dan tes unit sekarang, beri tahu dan saya akan mulai menerapkannya secara bertahap.
