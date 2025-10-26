@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+	{{>head}}
+	<!--
+		Halaman Tentang (About)
+		- Memperkenalkan pembuat dan menjelaskan fungsi aplikasi kepada pengguna biasa.
+		- class `no-scroll` diterapkan untuk menonaktifkan scroll halaman sesuai permintaan tugas;
+			jika nanti ingin mengizinkan scroll, hapus kelas ini dan gunakan area yang dapat di-scroll.
+	-->
+	<body class="no-scroll">
+		<div class="main-content">
+			{{>header}}
+			<div class="page-heading">
+				<div class="container">
+					<h1 class="page-title">{{judul}}</h1>
+				</div>
+			</div>
+			<section id="aboutme" class="about-hero">
+				<div class="container container-inner">
+					<div class="row d-flex align-items-center">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-12">
+							<div class="hero-left">
+								<span class="text-primary">Halo, selamat datang</span>
+								<h1 class="display-3 fw-semibold mt-4 mb-4">Aku Fattan Naufan Islami</h1>
+								<p class="lead mb-6">Saya suka belajar hal baru dan membuat karya digital yang menggabungkan kreativitas dan teknologi.</p>
+								<a href="/page/contact" class="btn btn-pill" aria-label="Buka halaman kontak">Contact Me</a>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-12">
+							<div class="hero-image position-relative">
+								<img src="/img/Foto Profile.png" alt="Foto Fattan Naufan Islami" class="img-fluid rounded-4 hero-photo">
+								<div class="img-decor" aria-hidden="true"></div>
+							</div>
+						</div>
+					</div>
+					<!-- Informasi aplikasi: ringkasan singkat di bawah hero -->
+					<div class="row mt-4">
+						<div class="col-12">
+							<div class="about-app-info">
+								<h2 class="about-app-title">Tentang <span class="accent">Strato Nimbus</span></h2>
+								<p class="about-app-subtitle">Strato Nimbus membantu kamu mengecek cuaca dengan cepat dan mudah. Masukkan nama kota atau alamat, lalu dapatkan ringkasan kondisi saat ini: suhu, kelembapan, kecepatan angin, visibilitas, dan indeks UV yang disajikan secara sederhana dan mudah dibaca.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		{{>footer}}
+	</body>
+</html>
