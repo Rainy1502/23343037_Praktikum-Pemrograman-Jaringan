@@ -1,4 +1,4 @@
-# Strato Nimbus — Web Server Praktikum
+# Strato Nimbus
 
 Strato Nimbus adalah aplikasi web edukasional untuk mengecek kondisi cuaca secara cepat.
 
@@ -93,3 +93,4 @@ sequenceDiagram
    end
    S-->>C: 200 { prediksiCuaca }
 ```
+
