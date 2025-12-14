@@ -1,4 +1,4 @@
-const { MongoClient, ObjectId } = require('mongodb');
+const { MongoClient } = require('mongodb');
 const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
 const namaDatabase = 'task-manager';
@@ -6,86 +6,106 @@ const namaDatabase = 'task-manager';
 async function main() {
     try {
         await client.connect();
-        console.log('Berhasil terhubung ke MongoDB database server');
+        console.log('✅ Berhasil terhubung ke MongoDB');
         const db = client.db(namaDatabase);
         const collection = db.collection('pengguna');
 
-        // 1. Ambil semua data pengguna
-        const semuaPengguna = await collection.find({}).toArray();
-        console.log(`Jumlah data pengguna: ${semuaPengguna.length}`);
-
-        // 2. Data unik untuk update (sesuai permintaan)
-        const namaUnik = ['Fattan', 'Islami', 'Athif', 'Dolly', 'Anggara', 'Hasanul', 'Fikri', 'Faza', 'Azka', 'Mahasya'];
-        const usiaBase = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]; // Usia dasar
-
-        // 3. Update setiap dokumen dengan nilai unik
-        for (let i = 0; i < semuaPengguna.length; i++) {
-            const pengguna = semuaPengguna[i];
-            
-            // Pilih nama berdasarkan indeks (berputar jika lebih banyak data)
-            const namaIndex = i % namaUnik.length;
-            const usiaIndex = i % usiaBase.length;
-            
-            // Buat nama lebih unik jika data lebih banyak dari namaUnik
-            let namaFinal = namaUnik[namaIndex];
-            if (semuaPengguna.length > namaUnik.length) {
-                // Tambahkan angka unik
-                namaFinal = `${namaUnik[namaIndex]}${Math.floor(i / namaUnik.length) + 1}`;
-            }
-            
-            // Hitung usia unik
-            const usiaFinal = usiaBase[usiaIndex] + Math.floor(i / usiaBase.length) * 3;
-            
-            const updateResult = await collection.updateOne(
-                { _id: pengguna._id },
-                { 
-                    $set: { 
-                        nama: namaFinal,
-                        usia: usiaFinal
-                    } 
-                }
-            );
-            
-            if (updateResult.modifiedCount > 0) {
-                console.log(`Updated: ${pengguna.nama || 'null'} → ${namaFinal} (${usiaFinal} tahun)`);
-            }
-        }
-
-        console.log('\n✅ Semua data telah diupdate menjadi unik');
+        // Ambil semua data
+        const semuaData = await collection.find({}).toArray();
+        console.log(`📊 Menemukan ${semuaData.length} data untuk diupdate`);
         
-        // 4. Verifikasi hasil
-        const hasilAkhir = await collection.find({}).sort({ nama: 1 }).toArray();
-        console.log('\n📊 DATA PENGguna TERBARU:');
+        // LIST NAMA UNIK LENGKAP (15 nama berbeda)
+        const semuaNamaUnik = [
+            'Fattan', 'Islami', 'Athif', 'Dolly', 'Anggara',
+            'Hasanul', 'Fikri', 'Faza', 'Azka', 'Mahasya',
+            'Rizki', 'Farhan', 'Adit', 'Bima', 'Candra'  // Tambahan untuk data ke-11-15
+        ];
+        
+        console.log('\n🔄 MEMPROSES UPDATE:');
         console.log('='.repeat(50));
         
-        hasilAkhir.forEach((p, index) => {
-            console.log(`${index + 1}. ${p.nama.padEnd(12)} | Usia: ${p.usia.toString().padEnd(2)} tahun | ID: ${p._id}`);
+        // Pastikan kita punya cukup nama unik
+        if (semuaData.length > semuaNamaUnik.length) {
+            console.log(`⚠️  Data (${semuaData.length}) lebih banyak dari nama unik (${semuaNamaUnik.length})`);
+            console.log('   Akan menambahkan angka untuk membuat unik');
+        }
+        
+        // Update setiap dokumen
+        for (let i = 0; i < semuaData.length; i++) {
+            const data = semuaData[i];
+            
+            // Pilih nama: jika data ≤ 15, pakai nama berbeda semua
+            let namaFinal;
+            if (i < semuaNamaUnik.length) {
+                namaFinal = semuaNamaUnik[i];  // Nama berbeda semua untuk 15 data pertama
+            } else {
+                // Jika lebih dari 15 data, baru pakai pengulangan dengan angka
+                const namaIndex = i % 10; // Kembali ke 10 nama pertama
+                namaFinal = `${semuaNamaUnik[namaIndex]}${Math.floor(i / 10) + 1}`;
+            }
+            
+            // Usia unik (mulai dari 20, increment 1)
+            const usiaFinal = 20 + i;
+            
+            await collection.updateOne(
+                { _id: data._id },
+                { $set: { nama: namaFinal, usia: usiaFinal } }
+            );
+            
+            console.log(`${(i + 1).toString().padEnd(3)} ${data.nama.padEnd(10)} → ${namaFinal.padEnd(12)} (${data.usia} → ${usiaFinal})`);
+        }
+        
+        // Tampilkan hasil akhir
+        console.log('\n📋 HASIL AKHIR (SEMUA NAMA BERBEDA):');
+        console.log('='.repeat(60));
+        const hasil = await collection.find({}).sort({ usia: 1 }).toArray();
+        
+        hasil.forEach((doc, idx) => {
+            const no = idx + 1;
+            const status = no <= 15 ? '✅ NAMA UNIK' : '🔢 NAMA+ANGKA';
+            console.log(`${no.toString().padEnd(3)} ${doc.nama.padEnd(12)} | Usia: ${doc.usia.toString().padEnd(2)} | ${status}`);
         });
-
-        // 5. Cek duplikat
-        console.log('\n🔍 VERIFIKASI UNIK:');
+        
+        // VERIFIKASI DETAIL
+        console.log('\n🔍 VERIFIKASI DETAIL:');
         const namaMap = new Map();
         const usiaMap = new Map();
-        let adaDuplikat = false;
+        let duplikatDitemukan = false;
         
-        hasilAkhir.forEach(p => {
-            if (namaMap.has(p.nama)) {
-                console.log(`❌ NAMA DUPLIKAT: ${p.nama}`);
-                adaDuplikat = true;
+        hasil.forEach(doc => {
+            // Cek duplikat nama
+            if (namaMap.has(doc.nama)) {
+                console.log(`❌ NAMA "${doc.nama}" DUPLIKAT!`);
+                duplikatDitemukan = true;
+            } else {
+                namaMap.set(doc.nama, doc.usia);
             }
-            namaMap.set(p.nama, true);
             
-            if (usiaMap.has(p.usia)) {
-                console.log(`❌ USIA DUPLIKAT: ${p.usia}`);
-                adaDuplikat = true;
+            // Cek duplikat usia
+            if (usiaMap.has(doc.usia)) {
+                console.log(`❌ USIA ${doc.usia} DUPLIKAT!`);
+                duplikatDitemukan = true;
+            } else {
+                usiaMap.set(doc.usia, doc.nama);
             }
-            usiaMap.set(p.usia, true);
         });
         
-        if (!adaDuplikat) {
-            console.log('✅ Semua nama dan usia UNIK!');
+        if (!duplikatDitemukan) {
+            console.log('🎉 SUKSES: Semua ' + hasil.length + ' data memiliki NAMA dan USIA yang UNIK!');
+            
+            // Tampilkan mapping nama-asal ke nama-baru
+            console.log('\n📝 TRANSFORMASI DATA:');
+            console.log('='.repeat(50));
+            console.log('No.  Nama Asal     → Nama Baru        Usia Baru');
+            console.log('='.repeat(50));
+            
+            for (let i = 0; i < Math.min(semuaData.length, 15); i++) {
+                const asal = semuaData[i];
+                const baru = hasil[i];
+                console.log(`${(i + 1).toString().padEnd(4)} ${asal.nama.padEnd(12)} → ${baru.nama.padEnd(15)} ${baru.usia} tahun`);
+            }
         }
-
+        
     } catch (error) {
         console.error('❌ Error:', error);
     } finally {
