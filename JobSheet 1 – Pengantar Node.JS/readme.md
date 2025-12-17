@@ -131,11 +131,11 @@ Program berjalan stabil karena:
     <tr>
       <td>
 
-Melalui pelaksanaan praktikum ini, saya memperoleh pemahaman awal mengenai konsep dasar pemrograman jaringan, khususnya bagaimana sebuah server HTTP bekerja dalam arsitektur Client–Server menggunakan Node.JS. Dengan membangun dan menjalankan HTTP server sederhana, saya dapat melihat secara langsung bagaimana request dikirim oleh client dan bagaimana server memproses serta memberikan response yang sesuai. Praktikum ini membantu saya menghubungkan konsep teoritis tentang protokol HTTP dengan implementasi nyata dalam bentuk program.
+Melalui pelaksanaan praktikum ini, aku memperoleh pemahaman awal mengenai konsep dasar pemrograman jaringan, khususnya bagaimana sebuah server HTTP bekerja dalam arsitektur Client–Server menggunakan Node.JS. Dengan membangun dan menjalankan HTTP server sederhana, aku dapat melihat secara langsung bagaimana request dikirim oleh client dan bagaimana server memproses serta memberikan response yang sesuai. Praktikum ini membantu saya menghubungkan konsep teoritis tentang protokol HTTP dengan implementasi nyata dalam bentuk program.
 
 <br>
 
-Selain itu, praktikum ini juga memberikan pengalaman praktis yang memperjelas peran Node.JS sebagai runtime environment di sisi server. Seluruh tahapan praktikum dapat dijalankan dengan baik dan sesuai dengan tujuan yang ditetapkan pada jobsheet. Pemahaman yang diperoleh dari praktikum ini menjadi dasar penting bagi saya untuk melanjutkan ke materi pemrograman jaringan yang lebih kompleks, seperti penggunaan framework web server dan pengelolaan komunikasi data yang lebih lanjut pada praktikum berikutnya.
+Selain itu, praktikum ini juga memberikan pengalaman praktis yang memperjelas peran Node.JS sebagai runtime environment di sisi server. Seluruh tahapan praktikum dapat dijalankan dengan baik dan sesuai dengan tujuan yang ditetapkan pada jobsheet. Pemahaman yang diperoleh dari praktikum ini menjadi dasar penting bagi aku untuk melanjutkan ke materi pemrograman jaringan yang lebih kompleks, seperti penggunaan framework web server dan pengelolaan komunikasi data yang lebih lanjut pada praktikum berikutnya.
 
   </td>
 </tr>
