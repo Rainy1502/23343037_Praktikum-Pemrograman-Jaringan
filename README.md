@@ -78,13 +78,18 @@ file <code>README.md</code> sebagai kesimpulan pelaksanaan praktikum.
 
 <ul>
   <li>
-    <a href="./JobSheet%201%20-%20Pengantar%20NodeJS/readme.md">
+    <a href="./JobSheet%202%20–%20Node.Js%20Module%20System/readme.md">
       <strong>Jobsheet 1 – Pengantar Node.JS</strong>
     </a><br>
     <small>Pengenalan Node.JS dan HTTP Server berbasis Client–Server</small>
   </li><br>
-
-  <li><strong>Jobsheet 2 – Node.JS Module System</strong></li>
+  <li>
+    <a href="./JobSheet%202%20–%20Node.Js%20Module%20System/readme.md">
+      <strong>Jobsheet 2 – Node.JS Module System</strong>
+    </a><br>
+    <small>Sistem modul Node.JS, import/export, dan pemrograman modular terstruktur</small>
+  </li><br>
+  
   <li><strong>Jobsheet 3 – HTTP Request and Response</strong></li>
   <li><strong>Jobsheet 4 – JavaScript Essentials</strong></li>
   <li><strong>Jobsheet 5 – Web Server dan Express</strong></li>
