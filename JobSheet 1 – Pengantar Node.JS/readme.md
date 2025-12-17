@@ -1,114 +1,139 @@
-# JobSheet 1: Pengantar Node.JS
+<div align="center">
+  <a href="https://unp.ac.id/">
+    <img src="https://unp.ac.id/nfs-assets/all/images/logo_unp_white.png" alt="UNP" width="400"/>
+  </a>
+</div><br>
 
-**Topik Utama:** Pengenalan lingkungan Node.JS dan HTTP Server  
-**Pendekatan Jaringan:** Protokol HTTP dengan arsitektur Client–Server
+<p align="center">
+  <strong style="font-size: 1.5em;">PRAKTIKUM PEMROGRAMAN JARINGAN</strong><br>
+  <em style="font-size: 1.1em;">Jobsheet 1 – Pengantar Node.JS</em>
+</p>
+
+<p align="center">
+  <small>HTTP Server • Client–Server • Node.JS</small>
+</p>
+
+<hr>
+
+<p align="center">
+  <small>
+    Nama : <b>Fattan Naufan Islami</b> &nbsp;|&nbsp;
+    NIM : <b>23343037</b> &nbsp;|&nbsp;
+    Prodi : <b>Informatika</b>
+  </small>
+</p>
 
 ---
 
-## Tujuan Praktikum
+<h2 align="center">🎯 Tujuan Praktikum</h2>
 
-- Memahami konsep dasar Node.JS sebagai runtime environment JavaScript di sisi server
-- Mempelajari cara membuat aplikasi server menggunakan modul `http` bawaan Node.JS
-- Memahami mekanisme request–response dalam komunikasi jaringan berbasis HTTP
-- Mengimplementasikan server yang dapat menerima dan merespons request dari client
+<ul>
+  <li>Memahami konsep dasar Node.JS sebagai runtime environment JavaScript di sisi server</li>
+  <li>Mempelajari cara membuat aplikasi server menggunakan modul <code>http</code> bawaan Node.JS</li>
+  <li>Memahami mekanisme request–response dalam komunikasi jaringan berbasis HTTP</li>
+  <li>Mengimplementasikan server yang dapat menerima dan merespons request dari client</li>
+</ul>
 
----
+<hr>
 
-## Konsep Jaringan yang Digunakan
+<h2 align="center">🌐 Konsep Jaringan yang Digunakan</h2>
 
 ### Model Komunikasi
-Praktikum ini menggunakan model **Client–Server** berbasis protokol **HTTP**. Server mendengarkan pada port tertentu dan merespons setiap request yang diterima dari client dengan pesan atau konten yang sesuai.
+Praktikum ini menggunakan model **Client–Server** berbasis protokol **HTTP**.  
+Server mendengarkan pada port tertentu dan merespons setiap request yang diterima dari client.
 
 ### Protokol Jaringan
-- **HTTP (HyperText Transfer Protocol):** Protokol aplikasi untuk komunikasi antara client dan server melalui jaringan komputer
-- **TCP/IP:** Protokol layer transport dan network yang mendasari komunikasi HTTP
+- **HTTP (HyperText Transfer Protocol):** Protokol aplikasi untuk komunikasi client–server
+- **TCP/IP:** Protokol transport dan network yang mendasari komunikasi HTTP
 
 ### Peran Aplikasi
-- **Server:** Node.JS berperan sebagai HTTP server yang menerima request dari client
-- **Client:** Browser atau tools lainnya yang mengirimkan request ke server
+- **Server:** Node.JS sebagai HTTP server
+- **Client:** Browser atau tools lain sebagai pengirim request
 
----
+<hr>
 
-## Implementasi Program
+<h2 align="center">⚙️ Implementasi Program</h2>
 
 ### Arsitektur Aplikasi
-
-Program terdiri dari dua komponen:
-
-- **hello.js** – Program sederhana yang menampilkan pesan ke console tanpa melibatkan jaringan
-- **hello-world.js** – HTTP server yang mendengarkan pada `127.0.0.1:3000`
+Program terdiri dari dua komponen utama:
+- **hello.js** – Program sederhana untuk output console
+- **hello-world.js** – HTTP server pada `127.0.0.1:3000`
 
 ### Alur Komunikasi Data
-
-Pada **hello-world.js**, komunikasi berlangsung sebagai berikut:
-
-1. Server dibuat menggunakan modul `http` bawaan Node.JS
-2. Server dikonfigurasi untuk mendengarkan pada `127.0.0.1` port `3000`
-3. Ketika client mengirimkan request HTTP, callback function dijalankan
-4. Server merespons dengan status code `200` (OK) dan header `Content-Type: text/plain`
-5. Respons berisi pesan `Hello, World!` yang dikirimkan kembali ke client
+1. Server dibuat menggunakan modul `http`
+2. Server mendengarkan pada `127.0.0.1:3000`
+3. Client mengirim request HTTP
+4. Server memproses request melalui callback
+5. Server mengirim response `200 OK` dengan pesan `Hello, World!`
 
 ### Mekanisme Pengiriman Data
+- **Format:** Plain text (`text/plain`)
+- **Metode:** HTTP GET
+- **Status:** HTTP 200 (Success)
 
-- **Format Data:** Plain text (`text/plain`)
-- **Metode Pengiriman:** HTTP GET request (default ketika mengakses URL di browser)
-- **Status Respons:** HTTP 200 (Success)
+<hr>
 
----
+<h2 align="center">📊 Hasil dan Pembahasan</h2>
 
-## Hasil dan Pembahasan
-
-### Keberhasilan Komunikasi Jaringan
-
-Komunikasi jaringan berhasil diimplementasikan. Server dapat menerima request dari client dan memberikan respons yang tepat.
+### Keberhasilan Komunikasi
+Komunikasi jaringan berhasil diimplementasikan.  
+Server mampu menerima request dan memberikan respons sesuai tujuan praktikum.
 
 ### Output Program
-
-- **hello.js:** Menampilkan pesan `Welcome to Node.Js!` di console
-- **hello-world.js:** 
-  - Server menampilkan log `Server running at http://127.0.0.1:3000/` saat startup
-  - Respons dengan pesan `Hello, World!` ketika client mengakses URL tersebut
+- **hello.js:** Menampilkan `Welcome to Node.Js!`
+- **hello-world.js:**  
+  - Log server aktif di console  
+  - Respons `Hello, World!` pada browser
 
 ### Dokumentasi Visual
 
-#### Output 1: Eksekusi Program hello.js
-![Output 1](Foto/Output%201.png)
+**Output 1 – Eksekusi Program hello.js**
+<div align="center">
+  <img src="Foto/Output%201.png" width="65%" alt="Output hello.js">
+</div>
 
-#### Output 2: Server HTTP Berjalan
-![Output 2](Foto/Output%202.png)
+<br>
 
-#### Output 3: Respons Server di Browser
-![Output 3](Foto/Output%203.png)
+**Output 2 – Server HTTP Berjalan**
+<div align="center">
+  <img src="Foto/Output%202.png" width="100%" alt="Server HTTP Node.JS">
+</div>
+
+<br>
+
+**Output 3 – Respons Server di Browser**
+<div align="center">
+  <img src="Foto/Output%203.png" width="100%" alt="Respons Browser">
+</div>
 
 ### Kesesuaian dengan Tujuan
+Semua tujuan praktikum tercapai:
+- Pemahaman Node.JS sebagai server runtime ✓
+- Implementasi HTTP server berhasil ✓
+- Mekanisme request–response berjalan baik ✓
 
-Semua tujuan praktikum telah tercapai:
+<hr>
 
-- ✓ Pemahaman dasar Node.JS sebagai server runtime
-- ✓ Implementasi HTTP server menggunakan modul `http`
-- ✓ Mekanisme request–response berfungsi dengan baik
-- ✓ Server dapat menerima dan membalas request dari client
+<h2 align="center">🚧 Kendala yang Dihadapi</h2>
 
----
-
-## Kendala yang Dihadapi
-
-Tidak terdapat kendala signifikan selama pelaksanaan praktikum. Program berjalan sesuai harapan tanpa error atau masalah koneksi yang berarti. Hal ini dimungkinkan karena:
+Tidak terdapat kendala signifikan selama praktikum.  
+Program berjalan stabil karena:
 - Konfigurasi port dilakukan dengan benar
-- Modul `http` Node.JS cukup stabil dan mudah digunakan
-- Modul `http` Node.JS cukup stabil dan straightforward untuk digunakan
-3. Lingkungan pengembangan (localhost) tidak memiliki kompleksitas jaringan eksternal
+- Modul `http` Node.JS stabil dan mudah digunakan
+- Lingkungan localhost minim kompleksitas jaringan
+
+<hr>
+
+<h2 align="center">📝 Kesimpulan</h2>
+
+- **Pemahaman Jaringan:** Praktikum memberikan pemahaman dasar kerja server HTTP dan Node.JS
+- **Teori vs Implementasi:** Implementasi sesuai model Client–Server dan protokol HTTP
+- **Keberhasilan:** Seluruh program berjalan sesuai tujuan praktikum
+- **Fondasi Lanjutan:** Menjadi dasar mempelajari Express.JS dan komunikasi jaringan lanjutan
 
 ---
 
-## Kesimpulan
- 
-   Praktikum berhasil memberikan pemahaman fundamental tentang bagaimana server HTTP bekerja dan peran Node.JS dalam membangun aplikasi jaringan.
-
-1. **Pemahaman Pemrograman Jaringan:** Praktikum berhasil memberikan pemahaman fundamental tentang bagaimana server HTTP bekerja dan cara Node.JS digunakan untuk membangun aplikasi jaringan.
-
-2. **Kesesuaian Teori dan Implementasi:** Implementasi kode sesuai dengan konsep teoritis model Client–Server dan protokol HTTP. Mekanisme request–response berfungsi dengan sempurna.
-
-3. **Tingkat Keberhasilan:** Praktikum dinyatakan berhasil dengan tingkat keberhasilan 100%. Kedua program (hello.js dan hello-world.js) berfungsi sesuai dengan tujuan praktikum yang telah ditetapkan.
-
-4. **Pembelajaran Lanjutan:** Fondasi yang diperoleh dari praktikum ini menjadi dasar untuk mempelajari framework web server seperti Express.JS dan mekanisme komunikasi jaringan yang lebih kompleks pada praktikum berikutnya.
+<p align="center">
+  <em>Dokumentasi Praktikum Pemrograman Jaringan</em><br>
+  <small>Kesimpulan Pelaksanaan Jobsheet 1</small>
+</p>
