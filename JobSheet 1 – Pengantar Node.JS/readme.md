@@ -126,10 +126,21 @@ Program berjalan stabil karena:
 
 <h2 align="center">📝 Kesimpulan</h2>
 
-- **Pemahaman Jaringan:** Praktikum memberikan pemahaman dasar kerja server HTTP dan Node.JS
-- **Teori vs Implementasi:** Implementasi sesuai model Client–Server dan protokol HTTP
-- **Keberhasilan:** Seluruh program berjalan sesuai tujuan praktikum
-- **Fondasi Lanjutan:** Menjadi dasar mempelajari Express.JS dan komunikasi jaringan lanjutan
+<div align="center">
+  <table width="90%">
+    <tr>
+      <td>
+
+Melalui pelaksanaan praktikum ini, saya memperoleh pemahaman awal mengenai konsep dasar pemrograman jaringan, khususnya bagaimana sebuah server HTTP bekerja dalam arsitektur Client–Server menggunakan Node.JS. Dengan membangun dan menjalankan HTTP server sederhana, saya dapat melihat secara langsung bagaimana request dikirim oleh client dan bagaimana server memproses serta memberikan response yang sesuai. Praktikum ini membantu saya menghubungkan konsep teoritis tentang protokol HTTP dengan implementasi nyata dalam bentuk program.
+
+<br>
+
+Selain itu, praktikum ini juga memberikan pengalaman praktis yang memperjelas peran Node.JS sebagai runtime environment di sisi server. Seluruh tahapan praktikum dapat dijalankan dengan baik dan sesuai dengan tujuan yang ditetapkan pada jobsheet. Pemahaman yang diperoleh dari praktikum ini menjadi dasar penting bagi saya untuk melanjutkan ke materi pemrograman jaringan yang lebih kompleks, seperti penggunaan framework web server dan pengelolaan komunikasi data yang lebih lanjut pada praktikum berikutnya.
+
+  </td>
+</tr>
+  </table>
+</div>
 
 ---
 
