@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+tests/
+.vscode/
+.DS_Store
+*.log
+coverage/
+.idea/
+/*.tgz
+README.md
+docs/**
+.tests/**
