@@ -1,3 +1,9 @@
+<p align="left">
+  <a href="..">
+    <img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI-6c757d?style=for-the-badge" width="130">
+  </a>
+</p>
+
 <div align="center">
   <a href="https://unp.ac.id/">
     <img src="https://unp.ac.id/nfs-assets/all/images/logo_unp_white.png" alt="UNP" width="400"/>
@@ -246,6 +252,10 @@ Selain itu, praktikum ini memperkuat pemahaman aku tentang ES6 module syntax dan
 </div>
 
 ---
+
+<p align="center">
+  <a href=".."><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI%20KE%20HALAMAN%20UTAMA-6c757d?style=for-the-badge" width="300"></a>
+</p>
 
 <p align="center">
   <em>Dokumentasi Praktikum Pemrograman Jaringan</em><br>
