@@ -1,3 +1,9 @@
+/*
+    Nama             : Fattan Naufan Islami
+    NIM              : 23343037
+    Program Studi    : Informatika
+*/
+
 import nodeFetch from 'node-fetch';
 // Gunakan `globalThis.fetch` jika tersedia (Node 18+), atau fallback ke node-fetch.
 const fetch = globalThis.fetch ?? nodeFetch;

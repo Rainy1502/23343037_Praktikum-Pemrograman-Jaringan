@@ -1,3 +1,9 @@
+/*
+    Nama             : Fattan Naufan Islami
+    NIM              : 23343037
+    Program Studi    : Informatika
+*/
+
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
