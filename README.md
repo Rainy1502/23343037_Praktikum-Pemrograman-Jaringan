@@ -113,10 +113,10 @@ Struktur ini dirancang untuk membimbing pembelajaran secara progresif dari konse
 | 3 | [**Jobsheet 3 – HTTP Request and API**](./JobSheet%203%20–%20HTTP%20Request%20and%20API/readme.md) | Mekanisme HTTP request dan response, serta integrasi API eksternal dalam aplikasi |
 | 4 | [**Jobsheet 4 – JavaScript Essentials**](./JobSheet%204%20–%20JavaScript%20Essentials/readme.md) | Konsep fundamental JavaScript yang digunakan dalam server-side programming |
 | 5 | [**Jobsheet 5 – Web Server and ExpressJs**](./JobSheet%205%20–%20Web%20Server%20and%20ExpressJs/README.md) | Pengembangan web server menggunakan Express.js dengan routing dan templating |
-| 6 | [**Jobsheet 6 – JSON HTTP Endpoints**](./JobSheet%206%20–%20JSON%20HTTP%20Endpoints/README.md) | Pembuatan REST API dengan JSON response dan integrasi layanan eksternal |
+| 6 | [**Jobsheet 6 – JSON HTTP Endpoints**](./JobSheet%206%20–%20%20JSON%20HTTP%20Endpoints/README.md) | Pembuatan REST API dengan JSON response dan integrasi layanan eksternal |
 | 7 | [**Jobsheet 7 – Version Control and App Deployment**](./JobSheet%207%20–%20Version%20Control%20and%20App%20Deployment/README.md) | Penggunaan Git/GitHub dan deployment aplikasi ke cloud platform (Vercel) |
-| 8 | [**Jobsheet 8 – MongoDB and Database Server**](./JobSheet%208%20–%20MongoDB%20and%20Database%20Server/README.md) | Database NoSQL dengan MongoDB dan operasi CRUD dalam aplikasi jaringan |
-| 9 | [**Jobsheet 9 – Socket Programming**](./JobSheet%209%20–%20Socket%20Programming/README.md) | Komunikasi real-time menggunakan WebSocket dan Socket.io untuk aplikasi chat |
+| 8 | [**Jobsheet 8 – MongoDB and Database Server**](./JobSheet%208%20–%20MongoDB%20and%20Database%20Server/readme.md) | Database NoSQL dengan MongoDB dan operasi CRUD dalam aplikasi jaringan |
+| 9 | [**Jobsheet 9 – Socket Programming**](./JobSheet%209%20–%20Socket%20Programming/readme.md) | Komunikasi real-time menggunakan WebSocket dan Socket.io untuk aplikasi chat |
 
 <hr>
 
