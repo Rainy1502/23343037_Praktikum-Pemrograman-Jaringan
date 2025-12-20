@@ -184,7 +184,7 @@ Berikut adalah dokumentasi visual penyelesaian setiap modul dan final test:
 
 **Overall Progress – 100% Completion**
 <div align="center">
-  <img src="Foto/JSE_100%_Selesai.png" width="75%" alt="100% Progress">
+  <img src="Foto/JSE_100%25_Selesai.png" width="75%" alt="100% Progress">
 </div>
 
 <hr>
