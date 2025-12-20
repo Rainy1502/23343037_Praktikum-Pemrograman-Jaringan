@@ -1,5 +1,5 @@
 <p align="left">
-  <a href=".."><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI-6c757d?style=for-the-badge" width="130"></a>
+  <a href="../README.md"><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI-6c757d?style=for-the-badge" width="130"></a>
 </p>
 
 <div align="center">
@@ -256,7 +256,7 @@ Selain itu, kesadaran akan pentingnya asynchronous programming, error handling, 
 ---
 
 <p align="center">
-  <a href=".."><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI%20KE%20HALAMAN%20UTAMA-6c757d?style=for-the-badge" width="300"></a>
+  <a href="../README.md"><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI%20KE%20HALAMAN%20UTAMA-6c757d?style=for-the-badge" width="300"></a>
 </p>
 
 <p align="center">

@@ -1,5 +1,5 @@
 <p align="left">
-  <a href="..">
+  <a href="../README.md">
     <img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI-6c757d?style=for-the-badge" width="130">
   </a>
 </p>
@@ -260,7 +260,7 @@ Secara lebih spesifik, aku dapat melihat peran penting Express.js dalam memfasil
 ---
 
 <p align="center">
-  <a href=".."><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI%20KE%20HALAMAN%20UTAMA-6c757d?style=for-the-badge" width="300"></a>
+  <a href="../README.md"><img alt="Kembali" src="https://img.shields.io/badge/←%20KEMBALI%20KE%20HALAMAN%20UTAMA-6c757d?style=for-the-badge" width="300"></a>
 </p>
 
 <p align="center">
